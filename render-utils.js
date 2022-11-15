@@ -25,4 +25,27 @@ export function renderMineralDetail(mineral) {
     const crystalSystemEl = document.createElement('p');
     const hardnessEl = document.createElement('p');
     const descriptionEl = document.createElement('p');
+
+    div.classList.add('mineral-detail');
+
+    nameEl.textContent = mineral.name;
+    nameEl.classList.add('name');
+
+    colorEl.textContent = mineral.color;
+    colorEl.classList.add('color');
+
+    crystalSystemEl.textContent = mineral.crystalSystem;
+    crystalSystemEl.classList.add('crystal-system');
+
+    hardnessEl.textContent = mineral.hardness;
+    hardnessEl.classList.add('hardness');
+
+    descriptionEl.textContent = mineral.description;
+    descriptionEl.classList.add('description');
+
+    img.src = `../assets/${mineral.color}.jpeg`;
+
+    div.append(nameEl, colorEl, crystalSystemEl, hardnessEl, descriptionEl);
+
+    return div;
 }
