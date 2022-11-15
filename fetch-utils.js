@@ -9,3 +9,12 @@ export async function getMinerals() {
 
     return response.data;
 }
+
+export async function getMineral(id) {
+    const response = await client.from('minerals').select().match.({ id: id}).single();
+    return checkError(response);
+}
+
+function checkError({data, error}) {
+    return error ? console.error(error) : data;
+}
