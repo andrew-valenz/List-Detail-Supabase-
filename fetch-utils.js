@@ -7,14 +7,14 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 export async function getMinerals() {
     const response = await client.from('minerals').select();
 
-    return response.data;
-}
-
-export async function getMineral(id) {
-    const response = await client.from('minerals').select().match.({ id: id}).single();
     return checkError(response);
 }
 
-function checkError({data, error}) {
+export async function getMineral(id) {
+    const response = await client.from('minerals').select().match({ id: id }).single();
+    return checkError(response);
+}
+
+function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }

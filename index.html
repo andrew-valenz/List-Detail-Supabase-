@@ -5,36 +5,29 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-        <!-- title and favicon -->
-        <title>Web App</title>
-        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
-
-        <!-- js -->
-        <script type="module" src="app.js"></script>
-
-        <!-- fonts -->
-        <!-- see https://fonts.google.com/ -->
-
+        <link
+            href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap"
+            rel="stylesheet"
+        />
         <script
             defer
-            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js.1.35.7/dist/umd/supabase.min.js"
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
         ></script>
         <!-- css -->
-        <link rel="stylesheet" href="styles/reset.css" />
-        <link rel="stylesheet" href="styles/home.css" />
-        <link rel="stylesheet" href="styles/style.css" />
-        <!-- add link for page specific css -->
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/home.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <title>Document</title>
     </head>
 
     <body>
         <header>
-            <a href="../">Home</a>
+            <a href="./">Home</a>
         </header>
         <main>
             <section class="main-section">
                 <h2>Minerals List</h2>
-                <div id="mineral-container"></div>
+                <div id="mineral-list-container"></div>
             </section>
         </main>
         <script type="module" src="./app.js"></script>

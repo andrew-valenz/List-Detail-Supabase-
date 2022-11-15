@@ -5,7 +5,7 @@ import { renderMineralCard } from './render-utils.js';
 const mineralListContainer = document.getElementById('mineral-list-container');
 
 /* Events */
-Window.addEventListener('load', async () => {
+window.addEventListener('load', async () => {
     const minerals = await getMinerals();
 
     for (let mineral of minerals) {
