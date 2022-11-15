@@ -16,3 +16,13 @@ export function renderMineralCard(mineral) {
 
     return a;
 }
+
+export function renderMineralDetail(mineral) {
+    const div = document.createElement('div');
+    const img = document.createElement('img');
+    const nameEl = document.createElement('p');
+    const colorEl = document.createElement('p');
+    const crystalSystemEl = document.createElement('p');
+    const hardnessEl = document.createElement('p');
+    const descriptionEl = document.createElement('p');
+}

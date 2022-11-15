@@ -16,23 +16,27 @@
         <!-- fonts -->
         <!-- see https://fonts.google.com/ -->
 
-        <!-- css -->
-        <link rel="stylesheet" href="styles/reset.css" />
-        <link rel="stylesheet" href="styles/global.css" />
-        <!-- add link for page specific css -->
-
         <script
             defer
             src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js.1.35.7/dist/umd/supabase.min.js"
         ></script>
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylsheet" href="styles/style.css" />
+        <!-- add link for page specific css -->
     </head>
 
     <body>
         <header>
-            <img class="logo" src="assets/html_css_js.png" alt="logo" />
-            <h1>Web App</h1>
+            <a href="./">Home</a>
         </header>
-
-        <main></main>
+        <main>
+            <section class="main-section">
+                <h2>Minerals List</h2>
+                <div id="mineral-container"></div>
+            </section>
+        </main>
+        <script type="module" src="./app.js"></script>
     </body>
 </html>
