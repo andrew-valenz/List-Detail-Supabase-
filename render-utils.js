@@ -3,14 +3,16 @@ export function renderMineralCard(mineral) {
     const a = document.createElement('a');
     const img = document.createElement('img');
     const p = document.createElement('p');
+    const hardness = document.createElement('p');
 
     div.classList.add('mineral-card');
 
-    p.textContent = mineral.name;
-    img.src = `./assets/${mineral.color}.jpeg`;
+    p.textContent = `Common Name:  ${mineral.name}`;
+    hardness.textContent = `Hardness:  ${mineral.hardness}`;
+    img.src = `./assets/${mineral.name}.jpeg`;
     a.href = `./detail/?id=${mineral.id}`;
 
-    div.append.apply(p, img);
+    div.append(img, p, hardness);
 
     a.append(div);
 
@@ -43,9 +45,9 @@ export function renderMineralDetail(mineral) {
     descriptionEl.textContent = mineral.description;
     descriptionEl.classList.add('description');
 
-    img.src = `../assets/${mineral.color}.jpeg`;
+    img.src = `../assets/${mineral.name}.jpeg`;
 
-    div.append(nameEl, colorEl, crystalSystemEl, hardnessEl, descriptionEl);
+    div.append(img, nameEl, colorEl, crystalSystemEl, hardnessEl, descriptionEl);
 
     return div;
 }
