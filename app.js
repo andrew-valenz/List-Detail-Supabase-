@@ -1,11 +1,16 @@
 /* Imports */
+import { getAllMinerals } from './fetch-utils.js';
+import { renderMineralCard } from './render-utils.js';
 
-/* Get DOM Elements */
-
-/* State */
+const mineralListContainer = document.getElementById('mineral-list-container');
 
 /* Events */
+window.addEventListener('load', async () => {
+    const minerals = await getAllMinerals();
 
-/* Display Functions */
-
-// (don't forget to call any display functions you want to run on page load!)
+    for (let mineral of minerals) {
+        const mineralEl = renderMineralCard(mineral);
+        console.log(mineralEl);
+        mineralListContainer.append(mineralEl);
+    }
+});
