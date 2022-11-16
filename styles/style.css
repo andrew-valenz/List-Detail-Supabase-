@@ -18,7 +18,7 @@ body {
     --footer-height: 25px;
 
     font-family: 'Titillium Web', sans-serif;
-    //  background-image: url('../assets/);
+    /* background-image: url('../assets/);  */
     background-size: 600px;
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -89,7 +89,7 @@ p {
     padding: 50px;
 }
 
-.mineral-card {
+.mineral-list-container {
     font-size: 1.5rem;
     padding: 10px;
     margin: 10px;
